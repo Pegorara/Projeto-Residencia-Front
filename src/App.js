@@ -1,4 +1,4 @@
-import React, { Component, Suspense } from "react";
+import React, { Suspense } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
