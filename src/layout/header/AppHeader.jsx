@@ -1,70 +1,93 @@
-import {
-  Box,
-  Container,
-  Image,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  Icon,
-  Text,
-  IconButton,
-} from "@chakra-ui/react";
-
-import { FaUser, FaSearch, FaShoppingCart } from "react-icons/fa";
+import { useEffect, useState } from 'react'
 
 import Logo from "../../assets/images/logo.png";
+import { CCollapse, CContainer, CHeader, CHeaderBrand, CHeaderNav, CImage, CNavItem, CNavLink, CNavbarNav, CNavbarToggler} from '@coreui/react';
+import * as icon from '@coreui/icons';
+import CIcon from '@coreui/icons-react';
 
 export function AppHeader() {
+  const [visible, setVisible] = useState(false)
+  const [exibirElemento, setExibirElemento] = useState(false)
+
+  const verificarLarguraTela = () => {
+    const larguraTela = window.innerWidth;
+    setExibirElemento(larguraTela < 900);
+  };
+
+  useEffect(() => {
+    verificarLarguraTela();
+    window.addEventListener('resize', verificarLarguraTela);
+    return () => {
+      window.removeEventListener('resize', verificarLarguraTela);
+    };
+  }, [])
+
   return (
-    <Box
-      bg={"blue.700"}
-      h="10vh"
-      display="flex"
-      alignItems={"center"}
-      pl={70}
-      pr={70}
-    >
-      <Container
-        maxW={"10vw"}
-        h="10vh"
-        bg={"gray.200"}
-        centerContent
-        justifyContent={"center"}
-      >
-        <Image src={Logo} />
-      </Container>
-      <InputGroup size="md" alignSelf={"center"} maxW={"50vw"}>
-        <InputLeftElement
-          pointerEvents="none"
-          children={<Icon as={FaSearch} boxSize={6} />}
-        />
-        <Input placeholder="Busque aqui" variant={"filled"} />
-      </InputGroup>
-      <Container
-        display="flex"
-        justifyContent={"center"}
-        alignItems={"center"}
-        maxH={50}
-        maxW={250}
-        gap={3}
-      >
-        <Icon as={FaUser} color={"gray.200"} boxSize={6} />
-        <div>
-          <Text color={"gray.200"}>
-            Faça <b>LOGIN</b> ou <br />
-            crie seu <b>CADASTRO</b>
-          </Text>
-        </div>
-      </Container>
-      <IconButton
-        borderRadius={50}
-        size="lg"
-        aria-label="Search database"
-        variant="unstyled"
-        display="flex"
-        justifyContent={"center"}
-        icon={<Icon as={FaShoppingCart} color={"gray.200"} boxSize={6} />}
-      />
-    </Box>
-  );
+    <>
+      <CHeader style={{padding: '10px 10vw'}}>
+        <CContainer fluid>
+          <CHeaderBrand href="#"><CImage src={Logo} style={{width: '10rem'}}/></CHeaderBrand>
+          {
+            exibirElemento === true ? 
+            <>
+              <div className="d-flex gap-3">
+                <div style={{display: 'flex', alignItems: 'center', border: '1px solid rgba(0, 0, 0, 0.25)', padding: '7px', borderRadius: '100px'}}>
+                  <CIcon icon={icon.cilCart} size="xl"/>
+                </div>
+                <div style={{display: 'flex', alignItems: 'center', border: '1px solid rgba(0, 0, 0, 0.25)', padding: '7px', borderRadius: '100px'}}>
+                  <CNavbarToggler onClick={() => setVisible(!visible)}>
+                    <CIcon icon={icon.cilMenu} size="xl" />
+                  </CNavbarToggler>
+                </div>
+              </div>
+              <CCollapse className="navbar-collapse" visible={visible}>
+                <CNavbarNav>
+                  <CNavItem>
+                    <CNavLink href="#" active>
+                      Home
+                    </CNavLink>
+                  </CNavItem>
+                  <CNavItem>
+                    <CNavLink href="#">Destaques</CNavLink>
+                  </CNavItem>
+                  <CNavItem href="#">
+                    Catálogo
+                  </CNavItem>
+                  <CNavItem href="#">
+                    Sobre Nós
+                  </CNavItem>
+                  <CNavItem href="#">
+                    Contato
+                  </CNavItem>
+                </CNavbarNav>
+              </CCollapse>
+            </>
+            : 
+            <CHeaderNav>
+              <CNavItem>
+                <CNavLink href="#" active>
+                  Home
+                </CNavLink>
+              </CNavItem>
+              <CNavItem>
+                <CNavLink href="#">Destaques</CNavLink>
+              </CNavItem>
+              <CNavItem href="#">
+                Catálogo
+              </CNavItem>
+              <CNavItem href="#">
+                Sobre Nós
+              </CNavItem>
+              <CNavItem href="#">
+                Contato
+              </CNavItem>
+              <CNavItem href="#">
+                <CIcon icon={icon.cilCart} size="xl" />
+              </CNavItem>
+            </CHeaderNav>
+          }
+        </CContainer>
+      </CHeader>
+    </>
+  )
 }

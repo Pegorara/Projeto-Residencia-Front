@@ -1,22 +1,19 @@
 import React, { Suspense } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
-import { ChakraProvider } from "@chakra-ui/react";
-import { Spinner } from "@chakra-ui/react";
 import { DefaultLayout } from "./layout/DefaultLayout";
+import '@coreui/coreui/dist/css/coreui.min.css'
 
-const loading = <Spinner />;
+import '../src/css/global.css'
 
 function App() {
   return (
-    <ChakraProvider>
-      <HashRouter>
-        <Suspense fallback={loading}>
-          <Routes>
-            <Route path="*" name="home" element={<DefaultLayout />} />
-          </Routes>
-        </Suspense>
-      </HashRouter>
-    </ChakraProvider>
+    <HashRouter>
+      <Suspense fallback={<div>sldka</div>}>
+        <Routes>
+          <Route path="*" name="home" element={<DefaultLayout />} />
+        </Routes>
+      </Suspense>
+    </HashRouter>
   );
 }
 
