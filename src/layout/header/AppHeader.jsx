@@ -81,7 +81,7 @@ export function AppHeader() {
               <CNavItem href="#">
                 Contato
               </CNavItem>
-              <CNavItem href="#">
+              <CNavItem href="#/carrinho">
                 <CIcon icon={icon.cilCart} size="xl" />
               </CNavItem>
             </CHeaderNav>
