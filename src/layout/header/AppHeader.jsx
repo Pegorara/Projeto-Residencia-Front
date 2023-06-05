@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/svg/LogoWasteGreen.svg";
 import { CCollapse, CContainer, CHeader, CHeaderBrand, CHeaderNav, CImage, CNavItem, CNavLink, CNavbarNav, CNavbarToggler} from '@coreui/react';
 import * as icon from '@coreui/icons';
 import CIcon from '@coreui/icons-react';
@@ -26,7 +26,7 @@ export function AppHeader() {
     <>
       <CHeader style={{padding: '10px 10vw'}}>
         <CContainer fluid>
-          <CHeaderBrand href="#"><CImage src={Logo} style={{width: '10rem'}}/></CHeaderBrand>
+          <CHeaderBrand href="#"><CImage src={Logo} style={{width: '12rem'}}/></CHeaderBrand>
           {
             exibirElemento === true ? 
             <>
