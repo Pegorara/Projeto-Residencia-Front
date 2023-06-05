@@ -30,10 +30,7 @@ export function AppHeader() {
           {
             exibirElemento === true ? 
             <>
-              <div className="d-flex gap-3">
-                <div style={{display: 'flex', alignItems: 'center', border: '1px solid rgba(0, 0, 0, 0.25)', padding: '7px', borderRadius: '100px'}}>
-                  <CIcon icon={icon.cilCart} size="xl"/>
-                </div>
+              <div className="d-flex gap-3">  
                 <div style={{display: 'flex', alignItems: 'center', border: '1px solid rgba(0, 0, 0, 0.25)', padding: '7px', borderRadius: '100px'}}>
                   <CNavbarToggler onClick={() => setVisible(!visible)}>
                     <CIcon icon={icon.cilMenu} size="xl" />
@@ -44,20 +41,20 @@ export function AppHeader() {
                 <CNavbarNav>
                   <CNavItem>
                     <CNavLink href="#" active>
-                      Home
+                      Junte-se
                     </CNavLink>
                   </CNavItem>
                   <CNavItem>
-                    <CNavLink href="#">Destaques</CNavLink>
+                    <CNavLink href="#">Nossa missão</CNavLink>
                   </CNavItem>
                   <CNavItem href="#">
-                    Catálogo
+                    Seja parceiro
                   </CNavItem>
                   <CNavItem href="#">
-                    Sobre Nós
+                    Adubo
                   </CNavItem>
                   <CNavItem href="#">
-                    Contato
+                    Entrar
                   </CNavItem>
                 </CNavbarNav>
               </CCollapse>
@@ -66,24 +63,24 @@ export function AppHeader() {
             <CHeaderNav>
               <CNavItem>
                 <CNavLink href="#" active>
-                  Home
+                  Junte-se
                 </CNavLink>
               </CNavItem>
               <CNavItem>
-                <CNavLink href="#">Destaques</CNavLink>
+                <CNavLink href="#">Nossa missão</CNavLink>
               </CNavItem>
               <CNavItem href="#">
-                Catálogo
+                Seja parceiro
               </CNavItem>
               <CNavItem href="#">
-                Sobre Nós
+                Adubo
               </CNavItem>
-              <CNavItem href="#">
-                Contato
+              <CNavItem href="#" style={{border: '1px solid black', borderRadius: '4px'}}>
+                Entrar
               </CNavItem>
-              <CNavItem href="#/carrinho">
+              {/* <CNavItem href="#/carrinho">
                 <CIcon icon={icon.cilCart} size="xl" />
-              </CNavItem>
+              </CNavItem> */}
             </CHeaderNav>
           }
         </CContainer>

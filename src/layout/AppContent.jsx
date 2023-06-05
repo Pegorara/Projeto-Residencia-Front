@@ -5,7 +5,7 @@ import { routes } from "../routes.js";
 
 export function AppContent() {
   return (
-    <CContainer fluid>
+    <CContainer fluid className="px-0">
       <Suspense fallback={<CSpinner color="primary" />}>
         <Routes>
           {routes.map((route, idx) => {
