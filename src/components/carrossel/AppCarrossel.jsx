@@ -1,5 +1,3 @@
-// import { useState } from 'react';
-
 import { CCarousel,CCarouselItem, CImage, } from '@coreui/react';
 
 export function AppCarrossel(){
