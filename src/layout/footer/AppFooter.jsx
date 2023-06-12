@@ -1,15 +1,15 @@
-import { CFooter, CLink } from "@coreui/react";
+import { CFooter, CImage } from "@coreui/react";
+import Logo from "../../assets/svg/LogoWasteGreen.svg";
 
 export function AppFooter() {
   return (
     <CFooter>
       <div>
-        <CLink href="https://coreui.io">CoreUI</CLink>
-        <span>&copy; 2023 creativeLabs.</span>
+        <CImage src={Logo} style={{width: '12rem'}}/>
       </div>
       <div>
-        <span>Powered by</span>
-        <CLink href="https://coreui.io">CoreUI</CLink>
+        <span>Devs: </span>
+        <b>Alipio Gomes, Igor Siqueira, João Gabriel, Kennedy Mendes e Wellington Michel.</b>
       </div>
     </CFooter>
   )
