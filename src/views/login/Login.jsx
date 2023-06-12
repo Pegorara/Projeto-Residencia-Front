@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { CButton, CCard, CCol, CForm, CFormInput, CFormLabel, CRow } from "@coreui/react";
+import { CButton, CCard, CForm, CFormInput, CFormLabel } from "@coreui/react";
 import { Link } from "react-router-dom";
 
 import './style.css'
