@@ -1,7 +1,7 @@
 import React from "react";
 
 import { AppHeader } from "./header/AppHeader";
-// import { AppFooter } from "./footer/AppFooter";
+import { AppFooter } from "./footer/AppFooter";
 import { AppContent } from "./AppContent";
 
 export function DefaultLayout() {
@@ -11,7 +11,7 @@ export function DefaultLayout() {
       <div className="body">
         <AppContent />
       </div>
-      {/* <AppFooter /> */}
+      <AppFooter />
     </div>
   );
 }

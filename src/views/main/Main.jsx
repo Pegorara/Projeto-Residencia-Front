@@ -3,9 +3,9 @@ import Check from '../../assets/svg/check.svg'
 import Cart from '../../assets/svg/cart.svg'
 import Chat from '../../assets/svg/chat.svg'
 import Shippment from '../../assets/svg/shippment.svg'
-import { AppFooter } from '../../layout/footer/AppFooter'
 
 import '../main/style.css'
+import { Link } from 'react-router-dom'
 
 function Main(){
   return (
@@ -14,7 +14,11 @@ function Main(){
         <div className="bannerFilter">
           <div className="bannerContent">
             <h1>Faça parte dessa revolução verde e contribua para um mundo mais limpo e sustentável.</h1>
-            <button id="bannerButton">Junte-se a nós</button>
+            <button id="bannerButton">
+              <Link to="/cadastro" style={{textDecoration: 'none', color: 'black'}}>
+                Junte-se a nós
+              </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -89,7 +93,6 @@ function Main(){
           </div>
         </div>
       </section>
-      <AppFooter />
     </>
   )
 }

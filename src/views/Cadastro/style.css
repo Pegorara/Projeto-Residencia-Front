@@ -1,3 +1,15 @@
-*{
-    color:  "black";
+.containerRegister {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 88vh;
+}
+
+.imgRegister {
+    background-image: url('../../assets/images/registerImg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.registerForm {
+    padding: 10%;
 }
