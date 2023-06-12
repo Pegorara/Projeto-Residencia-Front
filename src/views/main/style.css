@@ -169,7 +169,7 @@
   background-position: center;
   top: 20%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .faqInfos {
