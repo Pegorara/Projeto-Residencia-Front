@@ -1,5 +1,9 @@
 import ImagemMissao from '../../assets/images/ImagemMissao.png'
-import Adubo from '../../assets/images/adubo.png'
+import Check from '../../assets/svg/check.svg'
+import Cart from '../../assets/svg/cart.svg'
+import Chat from '../../assets/svg/chat.svg'
+import Shippment from '../../assets/svg/shippment.svg'
+import { AppFooter } from '../../layout/footer/AppFooter'
 
 import '../main/style.css'
 
@@ -33,13 +37,59 @@ function Main(){
         </div>
       </div>
       <div className="adubo">
-        <div className='aduboDivImage'>
-          <img src={Adubo} alt="" className='imgMission'/>
-        </div>
+        <div className='aduboDivImage'></div>
         <div className='aduboText'>
-          <h2>O uso de adubo orgânico tem uma série de benéficios para a produção agrícola. Esse tipo de adubo é rico em nutrientes essenciais, melhorando a qualidade do solo e aumentando a produtividade das culturas, além de ser uma alternatica a fertilizantes químicos.</h2>
+          <h1>Nosso produto</h1>
+          <h2>O nosso adubo orgânico tem uma série de benéficios para a produção agrícola. Esse tipo de adubo é rico em nutrientes essenciais, melhorando a qualidade do solo e aumentando a produtividade das culturas, além de ser uma alternativa a fertilizantes químicos.</h2>
         </div>
       </div>
+      <section className="sobreNos">
+        <div className="sobreNosInfos">
+          <h2>Porque a <span id="green">Waste</span><span id="greener">Green</span>?</h2>
+          <h1>Somos os melhores do mundo.</h1>
+          <p>Nosso desempenho em serviços e qualidade de produção tem o melhor reconhecimento do mundo. Além de que a fidelidade de nossos clientes mostra nossa capacidade de transformar o alimento através de um solo saudável.</p>
+        </div>
+        <div className="caracteristicas">
+          <div className='caracteristicasInfos'>
+            <div>
+              <img src={Check} alt="saude" />
+            </div>
+            <h3>Saúde de vida</h3>
+            <p>Nosso produto  não contamina o solo fazendo com que os alimentos cresçam bonitos e saudáveis.</p>
+          </div>
+          <div className='caracteristicasInfos'>
+            <div>
+              <img src={Cart} alt="exp" />
+            </div>
+            <h3>Experiência</h3>
+            <p>Estamos a anos no mercado, portanto somos compromissados e confiáveis na entrega de bons resultados.</p>
+          </div>
+          <div className='caracteristicasInfos'>
+            <div>
+              <img src={Shippment} alt="transporte" />
+            </div>
+            <h3>Transporte</h3>
+            <p>Todos os transportes, sejam para buscar ou entregar os produtos e resíduos são feitos de maneira 100% segura, eficiente e rápida.</p>
+          </div>
+          <div className='caracteristicasInfos'>
+            <div>
+              <img src={Chat} alt="serviço" />
+            </div>
+            <h3>Melhor Serviço</h3>
+            <p>Somos avaliados positivamente por todos os nossos clientes, mantendo a fidelidade deles e crescendo  cada vez mais com o engajamento.</p>
+          </div>
+        </div>
+      </section>
+      <section className="faq">
+        <div className="faqInfos">
+          <h3>Contato</h3>
+          <p>Ficou com alguma dúvida e precisa falar conosco diretamente? Envie um e-mail.</p>
+          <div id="buttonFaq">
+            <button>Envie um e-mail</button>
+          </div>
+        </div>
+      </section>
+      <AppFooter />
     </>
   )
 }

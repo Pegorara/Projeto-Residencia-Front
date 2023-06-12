@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 .banner {
   width: 100%;
   height: 70vh;
@@ -77,13 +80,116 @@
 }
 
 .adubo {
-  padding: 10%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  padding: 5% 10%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
 }
 
 .aduboText {
   display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #362217;
+  border-radius: 10px;
+  width: 70%;
+  padding: 5rem 10rem 5rem 20rem;
+  color: white;
+  align-self: flex-end;
+}
+
+.aduboDivImage {
+  background-image: url('../../assets/images/adubo.png');
+  width: 30%;
+  height: 60%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 15%;
+  top: 20%;
+  z-index: 1;
+  border: 10px solid white;
+  border-radius: 10px;
+}
+
+#green {
+  color: #388E3C;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+#greener {
+  color: #8BC34A;
+  font-family: 'Lato';
+  font-weight: bold;
+}
+
+.sobreNos {
+  background-image: linear-gradient(to bottom, #a6a09e00, #a6a09e09);
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  padding: 5%;
+}
+
+.sobreNosInfos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.sobreNosInfos p {
+  font-size: 1.5rem;
+  width: 60%;
+  text-align: center;
+}
+
+.caracteristicas {
+  display: flex;
+  width: 70%;
+  padding: 5%;
+  gap: 50px;
+}
+
+.caracteristicasInfos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.caracteristicasInfos p {
+  width: 90%;
+}
+
+.faq {
+  background-image: url('../../assets/images/faq.png');
+  padding: 10%;
+  background-size: cover;
+  background-position: center;
+  top: 20%;
+  display: flex;
+  justify-content: end;
+}
+
+.faqInfos {
+  background: white;
+  width: 50%;
+  padding: 5%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faqInfos p {
+  font-size: 1.5rem;
+}
+
+#buttonFaq button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #388E3C;
+  color: white;
 }
