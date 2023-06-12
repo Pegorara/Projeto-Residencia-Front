@@ -40,7 +40,7 @@ export function AppHeader() {
               <CCollapse className="navbar-collapse" visible={visible}>
                 <CNavbarNav>
                   <CNavItem>
-                    <CNavLink href="#" active>
+                    <CNavLink href="#/cadastro" active>
                       Junte-se
                     </CNavLink>
                   </CNavItem>
@@ -62,7 +62,7 @@ export function AppHeader() {
             : 
             <CHeaderNav>
               <CNavItem>
-                <CNavLink href="#" active>
+                <CNavLink href="#/cadastro" active>
                   Junte-se
                 </CNavLink>
               </CNavItem>
